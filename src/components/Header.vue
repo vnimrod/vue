@@ -2,7 +2,7 @@
   <header>
     <!-- way one from props -->
     <h1>{{ title }}</h1>
-    <Button
+    <Button v-show="homePage"
       @btn-click="$emit('toggle-add-task')"
       :text="showAddTask ? 'Close' : 'Add Task'"
       :color="showAddTask ? 'red' : 'green'"
@@ -38,6 +38,16 @@ export default {
   components: {
     Button,
   },
+  //computed will be responsible to show and un show the button Add Task when toggle between /about and / pages
+  computed: {
+    homePage() {
+      if(this.$route.path === '/') {
+        return true
+      }else{
+        return false
+      }
+    }
+  }
 };
 </script>
 

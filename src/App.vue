@@ -1,3 +1,6 @@
+
+<!-- THIS APP COMPONENT IS WITHOUT SERVER JSON PACKAGE (WITHOUT BACKEND) -->
+<!-- CHECK ON CRASH COURSE BRAD TRAVERSKI 2021 -->
 <template>
   <div class="container">
     <Header
